@@ -1,0 +1,7 @@
+.button{
+    color: blueviolet;
+}
+.button:hover{
+    background-color: blueviolet;
+    color: white;
+}
