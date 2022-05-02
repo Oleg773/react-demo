@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import {CarForm, Cars} from "./Components";
+import {useState} from "react";
 
 function App() {
+  const [newCar, setNewCar] = useState(null);
+  const [updateCar, setUpdateCar] = useState(null);
+  const [carForUpdate, setCarForUpdate] = useState(null);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        <CarForm setNewCar={setNewCar} carForUpdate={carForUpdate} setUpdateCar={setUpdateCar} setCarForUpdate={setCarForUpdate} />
+        <hr/>
+        <Cars newCar={newCar} setCarForUpdate={setCarForUpdate} updateCar={updateCar}/>
+      </div>
   );
 }
 
